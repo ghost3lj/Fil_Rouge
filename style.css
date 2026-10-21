@@ -1,0 +1,186 @@
+body {
+    background-color: rgb(4, 24, 33);
+    color: rgb(252, 252, 252);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(81, 81, 125);
+}
+
+#photographe {
+    margin-top: 17px;
+    margin-left: 5px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+#photographe span {
+    color: rgb(19, 214, 152);
+}
+
+#titre {
+    font-size: 45px;
+    margin-top: 50px;
+    margin-left: 145px;
+    font-weight: 600;
+}
+
+#titre span {
+    color: rgb(19, 214, 152);
+}
+
+header nav span {
+    margin: 10px;
+}
+
+#latin {
+    margin: 30px 145px;
+    font-size: 15px;
+    color: rgb(93, 104, 105);
+    font-weight: 500;
+    max-width: 700px;
+}
+
+#rubriques {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-top: 40px;
+}
+
+#rubriques span {
+    margin: 0px 15px;
+}
+
+#fond {
+    background-color: rgb(19, 214, 152);
+    padding: 5px 5px;
+}
+
+#photos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 9px;
+    margin-top: 25px;
+    margin-left: 145px;
+    margin-right: 145px;
+}
+
+#photos img {
+    width: 100%;
+}
+
+#copyright {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    color: rgb(90, 107, 115);
+    font-weight: 700;
+}
+
+#nom {
+    font-size: 15px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#type {
+    font-size: 11px;
+    margin-bottom: 50px;
+}
+
+/* Les polices */
+.yeseva-one-regular {
+    font-family: "Yeseva One", serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.montserrat-regular {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Vue tablette */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    #photographe {
+        margin: 15px 10px 30px;
+        font-size: 30px;
+    }
+
+    #titre {
+        margin: 50px 80px 0px;
+        font-size: 60px;
+        min-width: 800px;
+    }
+
+    #latin {
+        margin: 40px 80px;
+        max-width: 600px;
+        font-size: 20px;
+    }
+
+    #rubriques {
+        font-size: 15px;
+    }
+
+    #photos {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        margin:40px 80px ;
+    }
+}
+
+/* Vue téléphone */
+@media all and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    #photographe {
+        margin-bottom: 0px;
+    }
+
+    #titre {
+        margin-left: 10px;
+        font-size: 30px;
+        width: 100%; 
+    }
+
+    header nav {
+        margin-bottom: 25px;
+    }
+
+    #latin {
+        width: 100%;
+        margin: 30px 0px;
+    }
+
+    #rubriques {
+        font-size: 8px;
+        width: 100%;
+    }
+
+    #rubriques span {
+        margin: 0px 10px;
+    }
+
+    #photos {
+        margin: 20px 0px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #photos :nth-child(n+10) {
+        display: none;
+    }
+}
